@@ -155,8 +155,8 @@ end
 % IF A SUBJECT WITH VALUE ONSET TIMING ISSUE (see metadatas), LOAD THE
 % VALUE ONSET TIMES AND CHANGE WITH TO THE BEHAVIOURALLY RECORDED TIMES
 if ismember( sID, sub_adjusts )
-    ons = readmatrix([lPath '/' fName_ADJ])*1000;
-    
+    %ons = readmatrix([lPath '/' fName_ADJ])*1000;
+    ons = dlmread([lPath '/' fName_ADJ])*1000;
     count = 0;
     for iEvent = 2:nEvents
         
